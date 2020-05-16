@@ -10,7 +10,7 @@ var server = http.Server(app);
 var io = require('socket.io')(server);
 
 app.get('/', function (req, res) {
-    res.sendfile('index.html');
+    res.sendfile('./build/default/index.html');
 });
 
 server.listen(port, hostname, function () {
