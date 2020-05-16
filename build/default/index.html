@@ -1,7 +1,6 @@
-<html>
-<head>
-    <script type="module" src="node_modules/myscript-math-web/myscript-math-web.js"></script>
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<html><head>
+    <script type="module" src="./node_modules/myscript-math-web/myscript-math-web.js"></script>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <style>
         myscript-math-web {
             height: 100vh;
@@ -10,39 +9,32 @@
 </head>
 <body>
 <h3>
-    If y is the # of apples, and x is the # of oranges and there are 5 times as many apples as oranges,
+    If y is the number of apples, and x is the number of oranges and there are 5 times as many apples as oranges,
     write the relationship
 </h3>
-<myscript-math-web
-        applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493"
-        hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0"
-</myscript-math-web>
-<script>
-    window.addEventListener('load', () => {
-        const myscriptMathWebElement = document.querySelector('myscript-math-web');
-        const checkElement = document.querySelector('.check.classic-btn');
+<myscript-math-web applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493" hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0" <="" myscript-math-web="">
+<script>window.addEventListener('load', () => {
+  const myscriptMathWebElement = document.querySelector('myscript-math-web');
+  const checkElement = document.querySelector('.check.classic-btn');
+  myscriptMathWebElement.addEventListener('exported', evt => {
+    if (evt.detail.exports) {
+      const latexExport = evt.detail.exports['application/x-latex'] || '';
+      console.log('We got: ', latexExport);
 
-        myscriptMathWebElement.addEventListener('exported', (evt) => {
-            if (evt.detail.exports) {
-                const latexExport = evt.detail.exports['application/x-latex'] || '';
-                console.log('We got: ', latexExport);
-                if ("y=5x" === latexExport) {
-                    myscriptMathWebElement.themecolor = '#008000';
-                } else {
-                    myscriptMathWebElement.themecolor = '#FF0000';
-                }
-            }
-        });
+      if ("y=5x" === latexExport) {
+        myscriptMathWebElement.themecolor = '#008000';
+      } else {
+        myscriptMathWebElement.themecolor = '#FF0000';
+      }
+    }
+  });
+  /*
+  checkElement.addEventListener('click', () => {
+      myscriptMathWebElement.convert();
+      const functionOutput = myscriptMathWebElement.export_();
+      console.log('Output :' + functionOutput);
+  });
+    */
+});</script>
 
-        /*
-        checkElement.addEventListener('click', () => {
-            myscriptMathWebElement.convert();
-            const functionOutput = myscriptMathWebElement.export_();
-            console.log('Output :' + functionOutput);
-        });
-
-         */
-    });
-</script>
-</body>
-</html>
+</myscript-math-web></body></html>
