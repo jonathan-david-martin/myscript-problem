@@ -5,6 +5,10 @@
 
     <script language="javascript" type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+<!--
+    <script type="text/javascript" src="https://tonejs.github.io/build/r6/p5.Tone.min.js"></script>
+-->
     <script language="javascript" type="text/javascript" src="sketch.js"></script>
 
     <link rel="stylesheet" href="./index.css">
@@ -77,10 +81,13 @@
 <button type="button" onclick="startTimer()">Start Timer!</button>
 <script>
     function startTimer(){
+        var synth = new Tone.Synth().toMaster();
         points = [];
         horSlider.value(0);
         vertSlider.value(0);
         drawGrid();
+        loadSynth(synth);
+
         timeStamp = frameCount;
         console.log('redraw');
 

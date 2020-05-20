@@ -1,48 +1,91 @@
-<html>
-<head>
+<html><head>
     <script type="module" src="./node_modules/myscript-math-web/myscript-math-web.js"></script>
     <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="./node_modules/tone/tone.js"></script>
+
+    <script language="javascript" type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+    <link rel="stylesheet" href="./index.css">
     <style>
         myscript-math-web {
-            height: 100vh;
+            height: 40vh;
+            width: 400px;
         }
     </style>
 </head>
 <body>
-<h3>
-    If y is the number of apples, and x is the number of oranges and there are 5 times as many apples as oranges,
-    write the relationship
-</h3>
-<myscript-math-web
-        applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493"
-        hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0"
-</myscript-math-web>
+<h2>
+    If x measures the number of seconds
+</h2>
+<h2>
+    and y measures the distance traveled
+</h2>
+<h2>
+    and you travel 1 units per second,
+</h2>
+<h2>
+    move the slider at the correct rate
+</h2>
+<h2>
+    and write the relationship between y and x
+</h2>
+
+
+
+<br>
+<myscript-math-web applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493" hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0">
 <script>
+
     window.addEventListener('load', () => {
-        const myscriptMathWebElement = document.querySelector('myscript-math-web');
-        const checkElement = document.querySelector('.check.classic-btn');
+  const myscriptMathWebElement = document.querySelector('myscript-math-web');
+  const checkElement = document.querySelector('.check.classic-btn');
+  myscriptMathWebElement.addEventListener('exported', evt => {
+    if (evt.detail.exports) {
+      const latexExport = evt.detail.exports['application/x-latex'] || '';
+      console.log('We got: ', latexExport);
 
-        myscriptMathWebElement.addEventListener('exported', (evt) => {
-            if (evt.detail.exports) {
-                const latexExport = evt.detail.exports['application/x-latex'] || '';
-                console.log('We got: ', latexExport);
-                if ("y=5x" === latexExport) {
-                    myscriptMathWebElement.themecolor = '#008000';
-                } else {
-                    myscriptMathWebElement.themecolor = '#FF0000';
-                }
-            }
-        });
+      if ("y=x" === latexExport || "y=1x" === latexExport) {
+        myscriptMathWebElement.themecolor = '#008000';
+            fill(255,0,0);
+            strokeWeight(4);
+            line(0,400,400,0);
+          //line(160,400,240,1);
+          //drawPoints(160,400);
+          //drawPoints(240,1);
 
-        /*
-        checkElement.addEventListener('click', () => {
-            myscriptMathWebElement.convert();
-            const functionOutput = myscriptMathWebElement.export_();
-            console.log('Output :' + functionOutput);
-        });
+      } else {
+        myscriptMathWebElement.themecolor = '#FF0000';
+      }
+    }
+  });
+  /*
+  checkElement.addEventListener('click', () => {
+      myscriptMathWebElement.convert();
+      const functionOutput = myscriptMathWebElement.export_();
+      console.log('Output :' + functionOutput);
+  });
+    */
+});</script>
 
-         */
-    });
+</myscript-math-web>
+<input id="foo" value="coordinate array" size="50">
+<button class="btn" data-clipboard-target="#foo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-clippy.svg/2000px-Octicons-clippy.svg.png" alt="Copy to clipboard" height="22" width="22">
+</button>
+<button type="button" onclick="startTimer()">Start Timer!</button>
+<script>
+    function startTimer(){
+        points = [];
+        horSlider.value(0);
+        vertSlider.value(0);
+        drawGrid();
+        timeStamp = frameCount;
+        console.log('redraw');
+
+
+    }
 </script>
 </body>
 </html>

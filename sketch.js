@@ -30,9 +30,7 @@ var horValue = 0;
 var button;
 var timeStamp = 0;
 
-var synth;
-
-
+var osc;
 
 
 
@@ -48,28 +46,6 @@ function redraw(){
     //points = [];
     //timeStamp = frameCount;
     console.log('redraw');
-}
-
-function loadSynth(synth_input){
-    synth = synth_input;
-}
-
-function playNotes(){
-    if(frameCount - timeStamp < 1200 && timeStamp !=0) {
-        if (frameCount % 40 === 0) {
-            horSlider.value(horValue += 0.1);
-            drawPoints(horSlider.value() * 120, 400 - vertSlider.value() * 120);
-            //create a synth and connect it to the master output (your speakers)
-            //var synth = new Tone.Synth().toMaster();
-
-
-//play a middle 'C' for the duration of an 8th note
-            synth.triggerAttackRelease('C4', '8n');
-        }
-    }
-    else{
-        horSlider.value(0);
-    }
 }
 
 function drawGrid(){
@@ -107,6 +83,11 @@ function setup() {
     var cnv = createCanvas(405, 405);
     cnv.style('display', 'block');
     cnv.position(450,0);
+
+    osc = new p5.Oscillator();
+    osc.setType('square');
+    osc.freq(300);
+    osc.amp(0.05);
 
     /*
     button = createButton('/REDRAW/');
@@ -152,8 +133,21 @@ function setup() {
 
 function draw() {
     horValue = horSlider.value();
-    playNotes();
 
+    if(frameCount - timeStamp < 1200 && timeStamp !=0) {
+        if (frameCount % 40 === 0) {
+            horSlider.value(horValue += 0.1);
+            drawPoints(horSlider.value() * 120, 400 - vertSlider.value() * 120);
+            //create a synth and connect it to the master output (your speakers)
+            var synth = new Tone.Synth().toMaster()
+
+//play a middle 'C' for the duration of an 8th note
+            synth.triggerAttackRelease('C4', '8n')
+        }
+    }
+    else{
+        horSlider.value(0);
+    }
 
 };
 
