@@ -1,40 +1,20 @@
 //var mybtn = new Clipboard('.btn');
 
-var xCoord = 30
-var yCoord =180
-var brushWidth=30
-
 var div = 20;
-
-//program to pick coordinates from grid
-
 var i = 0;
 var j = 0;
-
 var points = [];
-
 var tempX = 0;
 var tempY = 0;
-
 var counter = 0;
-
 var duplicates = false;
-
 var coord_text = "";
-
 var vertSlider;
 var horSlider;
-
 var horValue = 0;
-
 var button;
 var timeStamp = 0;
-
 var synth;
-
-
-
-
 
 var noDups = function(){
     for (var k = 0;k<points.length-2;k+=2){
@@ -62,7 +42,6 @@ function playNotes(){
             //create a synth and connect it to the master output (your speakers)
             //var synth = new Tone.Synth().toMaster();
 
-
 //play a middle 'C' for the duration of an 8th note
             synth.triggerAttackRelease('C4', '8n');
         }
@@ -74,10 +53,9 @@ function playNotes(){
 
 function drawGrid(){
     background(255);
-
     textSize(20);
-
     stroke(0,0,0);
+
     for (let i=0;i<400;i++){
         line(i*div,j,i*div,j+400);
     }
@@ -108,29 +86,11 @@ function setup() {
     cnv.style('display', 'block');
     cnv.position(450,0);
 
-    /*
-    button = createButton('/REDRAW/');
-    col = color(0);
-    fontCol = color(255,255,255);
-    button.style('font-size', '30px');
-    button.style('background-color', col);
-    button.style('color', fontCol);
-
-    var buttonX = 500;
-    var buttonY = 450;
-    button.position(buttonX, buttonY);
-
-    button.mousePressed(redraw);
-
-     */
-
     drawGrid();
-
 
     noStroke();
     textSize(17);
     fill(255, 0, 0);
-
     textSize(20);
     stroke(0,0,0);
     strokeWeight(1);
@@ -146,15 +106,12 @@ function setup() {
     horSlider.id('horSlider');
     horSlider.position(430, 400);
     horSlider.style('width', '420px');
-
 };
 
 
 function draw() {
     horValue = horSlider.value();
     playNotes();
-
-
 };
 
 
@@ -162,18 +119,14 @@ function mouseClicked() {
     if(mouseY<450) {
         drawPoints(mouseX, mouseY);
     }
-
 };
 
 function drawPoints(x, y){
     if(y>0 && x<400 && x>0){
-        //tempX = round((mouseX-200)/40);
-        //tempY = -round((mouseY-200)/40);
         tempX = round(x/div)*div;
         tempY = round(y/div)*div;
         stroke(0, 0, 255);
         fill(0, 0, 255);
-
         ellipse(tempX, tempY, 10,10);
 
         points.push(tempX);
@@ -196,31 +149,23 @@ function drawPoints(x, y){
         if (duplicates === false){
             text("("+round((mouseX-200)/div) + "," + -round((mouseY-200)/div) +")", 10, 230+counter*15);
 
-
             if(counter === 0){
-                //textSize(15);
-                //text("type this into starcoder editor:", 80+counter*20, 345,400,400);
-                //text("([["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]", 80+counter*40, 360,400,400);
                 coord_text = "createStationBlock" + "([["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]";
-                document.getElementById("foo").value = coord_text;
+                //document.getElementById("foo").value = coord_text;
             }
             else{
-                //textSize(15);
-                //text("," + "["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]", 90+counter*40, 360,400,400);
                 coord_text = coord_text + "," + "["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]";
-                document.getElementById("foo").value = coord_text;
+                //document.getElementById("foo").value = coord_text;
             }
         }
         else{
             coord_text = coord_text +"])";
-            document.getElementById("foo").value = coord_text;
+            //document.getElementById("foo").value = coord_text;
 
         }
-
         duplicates = false;
         counter++;
     }
-
 }
 
 

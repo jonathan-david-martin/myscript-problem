@@ -17,71 +17,78 @@
     <link rel="stylesheet" href="./index.css">
     <style>
         myscript-math-web {
-            height: 40vh;
+            height: 80vh;
             width: 400px;
         }
     </style>
 </head>
 <body>
-<h2>
-    If x measures the number of seconds
-</h2>
-<h2>
-    and y measures the distance traveled
-</h2>
-<h2>
-    and you travel 1 units per second,
-</h2>
-<h2>
-    move the slider at the correct rate
-</h2>
-<h2>
-    and write the relationship between y and x
-</h2>
-
-
 
 <br>
-<myscript-math-web applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493" hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0">
-<script>
+<table style="width:100%">
+    <tr>
+        <td>
+            <p>
+                If x measures the number of seconds and y measures the distance traveled and you travel 1 units per second,
+                <br>
+                move the slider at the correct rate and write the relationship between y and x
+            </p>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+        <button type="button" onclick="startTimer()">Start Timer!</button>
+        </td>
+        <td></td>
+    </tr>
 
-    window.addEventListener('load', () => {
-  const myscriptMathWebElement = document.querySelector('myscript-math-web');
-  const checkElement = document.querySelector('.check.classic-btn');
-  myscriptMathWebElement.addEventListener('exported', evt => {
-    if (evt.detail.exports) {
-      const latexExport = evt.detail.exports['application/x-latex'] || '';
-      console.log('We got: ', latexExport);
+    <tr>
+        <td>
+            <myscript-math-web applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493" hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0">
+                <script>
 
-      if ("y=x" === latexExport || "y=1x" === latexExport) {
-        myscriptMathWebElement.themecolor = '#008000';
-            fill(255,0,0);
-            strokeWeight(4);
-            line(0,400,400,0);
-          //line(160,400,240,1);
-          //drawPoints(160,400);
-          //drawPoints(240,1);
+                    window.addEventListener('load', () => {
+                        const myscriptMathWebElement = document.querySelector('myscript-math-web');
+                        const checkElement = document.querySelector('.check.classic-btn');
+                        myscriptMathWebElement.addEventListener('exported', evt => {
+                            if (evt.detail.exports) {
+                                const latexExport = evt.detail.exports['application/x-latex'] || '';
+                                console.log('We got: ', latexExport);
 
-      } else {
-        myscriptMathWebElement.themecolor = '#FF0000';
-      }
-    }
-  });
-  /*
-  checkElement.addEventListener('click', () => {
-      myscriptMathWebElement.convert();
-      const functionOutput = myscriptMathWebElement.export_();
-      console.log('Output :' + functionOutput);
-  });
-    */
-});</script>
+                                if ("y=x" === latexExport || "y=1x" === latexExport) {
+                                    myscriptMathWebElement.themecolor = '#008000';
+                                    fill(255,0,0);
+                                    strokeWeight(4);
+                                    line(0,400,400,0);
+                                    //line(160,400,240,1);
+                                    //drawPoints(160,400);
+                                    //drawPoints(240,1);
 
-</myscript-math-web>
+                                } else {
+                                    myscriptMathWebElement.themecolor = '#FF0000';
+                                }
+                            }
+                        });
+                        /*
+                        checkElement.addEventListener('click', () => {
+                            myscriptMathWebElement.convert();
+                            const functionOutput = myscriptMathWebElement.export_();
+                            console.log('Output :' + functionOutput);
+                        });
+                          */
+                    });</script>
+            </myscript-math-web>
+        </td>
+        <td></td>
+    </tr>
+</table>
+<!--
 <input id="foo" value="coordinate array" size="50">
 <button class="btn" data-clipboard-target="#foo">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-clippy.svg/2000px-Octicons-clippy.svg.png" alt="Copy to clipboard" height="22" width="22">
 </button>
-<button type="button" onclick="startTimer()">Start Timer!</button>
+-->
 <script>
     function startTimer(){
         var synth = new Tone.Synth().toMaster();
@@ -91,11 +98,8 @@
         vertSlider.value(0);
         drawGrid();
         loadSynth(synth);
-
         timeStamp = frameCount;
         console.log('redraw');
-
-
     }
 </script>
 </body>
