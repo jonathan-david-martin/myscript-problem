@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acf81330-e6a9-46c2-a4b8-ad43e9da0a9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/default/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/default/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myscript-problem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mathslider-and-handwriting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,12 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="340">
+              <caret line="63" column="35" selection-start-line="62" selection-start-column="36" selection-end-line="63" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -27,29 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build/default/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/default/sketch.js">
+        <entry file="file://$PROJECT_DIR$/build/default/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="513">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/tone/build/Tone.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4851" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -69,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
+            <state relative-caret-position="5529">
               <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="1" />
               <folding>
                 <element signature="e#234#769#1" expanded="true" />
@@ -81,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="399">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -90,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+            <state relative-caret-position="2755">
+              <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -99,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="874">
               <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
             </state>
           </provider>
@@ -156,10 +152,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="23" />
-    <option name="width" value="818" />
-    <option name="height" value="851" />
+    <option name="x" value="69" />
+    <option name="y" value="77" />
+    <option name="width" value="825" />
+    <option name="height" value="718" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -167,41 +163,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="myscript-problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mathslider-and-handwriting" type="b2602c69:ProjectViewProjectNode" />
               <item name="myscript-problem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="myscript-problem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myscript-problem" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myscript-problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mathslider-and-handwriting" type="b2602c69:ProjectViewProjectNode" />
               <item name="myscript-problem" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="myscript-problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mathslider-and-handwriting" type="b2602c69:ProjectViewProjectNode" />
               <item name="myscript-problem" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="myscript-problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mathslider-and-handwriting" type="b2602c69:ProjectViewProjectNode" />
               <item name="myscript-problem" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,22 +252,26 @@
       <option name="presentableId" value="Default" />
       <updated>1589599022683</updated>
       <workItem from="1589599023921" duration="4465000" />
+      <workItem from="1590278767724" duration="270000" />
+      <workItem from="1590414582942" duration="3868000" />
+      <workItem from="1591789596853" duration="533000" />
+      <workItem from="1592235957516" duration="551000" />
+      <workItem from="1595615602449" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29191000" />
+    <option name="totallyTimeSpent" value="35953000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="818" height="851" extended-state="0" />
-    <editor active="true" />
+    <frame x="69" y="77" width="825" height="718" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2446675" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24129353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994872" visible="true" weight="0.2859025" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994872" visible="true" weight="0.10543131" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -294,19 +289,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.firebaserc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html" />
+    <entry file="file://$PROJECT_DIR$/.firebaserc" />
     <entry file="file://$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" />
     <entry file="file://$PROJECT_DIR$/.firebase/hosting.YnVpbGQvZGVmYXVsdA.cache" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -314,37 +300,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/firebase.json" />
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/default/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        <state relative-caret-position="3097">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
+    <entry file="file://$PROJECT_DIR$/build/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="1" />
+        <state relative-caret-position="340">
+          <caret line="63" column="35" selection-start-line="62" selection-start-column="36" selection-end-line="63" selection-end-column="35" />
           <folding>
-            <element signature="e#234#769#1" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/tone/build/Tone.js">
+    <entry file="file://$PROJECT_DIR$/build/default/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4851" />
+        <state relative-caret-position="513">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/tone/build/Tone.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/build/default/node_modules/tone/Tone.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -356,41 +344,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5529">
+          <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="1" />
+          <folding>
+            <element signature="e#234#769#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+        <state relative-caret-position="2755">
+          <caret line="145" column="9" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/default/sketch.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/default/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="874">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
         </state>
       </provider>
     </entry>
