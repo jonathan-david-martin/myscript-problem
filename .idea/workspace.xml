@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acf81330-e6a9-46c2-a4b8-ad43e9da0a9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myscript-problem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mathslider-and-handwriting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="acf81330-e6a9-46c2-a4b8-ad43e9da0a9a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -152,8 +148,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
-    <option name="y" value="77" />
+    <option name="x" value="17" />
+    <option name="y" value="63" />
     <option name="width" value="825" />
     <option name="height" value="718" />
   </component>
@@ -261,10 +257,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35953000" />
+    <option name="totallyTimeSpent" value="35963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="77" width="825" height="718" extended-state="0" />
+    <frame x="17" y="63" width="825" height="718" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24129353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

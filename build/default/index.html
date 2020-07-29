@@ -1,109 +1,55 @@
-<html><head>
-    <script type="module" src="./node_modules/myscript-math-web/myscript-math-web.js"></script>
-    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="./node_modules/tone/tone.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-    <script language="javascript" type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.33/Tone.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.2/Tone.js"></script>
-
-<!--
-    <script type="text/javascript" src="https://tonejs.github.io/build/r6/p5.Tone.min.js"></script>
--->
-    <script language="javascript" type="text/javascript" src="sketch.js"></script>
-
-    <link rel="stylesheet" href="./index.css">
-    <style>
-        myscript-math-web {
-            height: 80vh;
-            width: 700px;
-        }
-    </style>
 </head>
+
 <body>
 
-<br>
-<table style="width:100%">
-    <tr>
-        <td>
-            <p>
-                If x measures the number of seconds and y measures the distance traveled and you travel 1 units per second,
-                <br>
-                move the slider at the correct rate and write the relationship between y and x
-            </p>
-        </td>
-        <td></td>
-    </tr>
-    <tr></tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-        <button type="button" onclick="startTimer()">Start Timer!</button>
-        </td>
+<h2>
+    If x measures the number of seconds
+</h2>
+<h2>
+    and y measures the distance traveled
+</h2>
+<h2>
+    and you travel 1 units per second,
+</h2>
+<h2>
+    move the slider at the correct rate
+</h2>
+<h2>
+    and write the relationship between y and x
+</h2>
+<iframe src="https://drive.google.com/file/d/1Da2pec8FAwBGdvpAUulsvtQBTVIh2ynJ/preview" width="640" height="480"></iframe>
+<input hidden id="foo" value="coordinate array" size="10">
 
-    </tr>
-
-    <tr>
-        <td>
-            <myscript-math-web applicationkey="ffb141c9-26fe-436b-8fcd-af9934ef7493" hmackey="c3cf4927-914c-4533-a09c-01b532c45bf0">
-                <script>
-
-                    window.addEventListener('load', () => {
-                        const myscriptMathWebElement = document.querySelector('myscript-math-web');
-                        const checkElement = document.querySelector('.check.classic-btn');
-                        myscriptMathWebElement.addEventListener('exported', evt => {
-                            if (evt.detail.exports) {
-                                const latexExport = evt.detail.exports['application/x-latex'] || '';
-                                console.log('We got: ', latexExport);
-
-                                if ("y=x" === latexExport || "y=1x" === latexExport) {
-                                    myscriptMathWebElement.themecolor = '#008000';
-                                    fill(255,0,0);
-                                    strokeWeight(4);
-                                    line(0,400,400,0);
-                                    //line(160,400,240,1);
-                                    //drawPoints(160,400);
-                                    //drawPoints(240,1);
-
-                                } else {
-                                    myscriptMathWebElement.themecolor = '#FF0000';
-                                }
-                            }
-                        });
-                        /*
-                        checkElement.addEventListener('click', () => {
-                            myscriptMathWebElement.convert();
-                            const functionOutput = myscriptMathWebElement.export_();
-                            console.log('Output :' + functionOutput);
-                        });
-                          */
-                    });</script>
-            </myscript-math-web>
-        </td>
-        <td></td>
-    </tr>
-</table>
-<!--
-<input id="foo" value="coordinate array" size="50">
-<button class="btn" data-clipboard-target="#foo">
+<button hidden class="btn" data-clipboard-target="#foo">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-clippy.svg/2000px-Octicons-clippy.svg.png" alt="Copy to clipboard" height="22" width="22">
 </button>
--->
+
+<button type="button" onclick="startTimer()">Start Timer!</button>
 <script>
-    function startTimer(){
-        var synth = new Tone.Synth().toMaster();
-        synth.triggerAttackRelease('C4', '8n');
+    function startTimer() {
         points = [];
         horSlider.value(0);
         vertSlider.value(0);
         drawGrid();
-        loadSynth(synth);
         timeStamp = frameCount;
-        console.log('redraw');
+        console.log('redraw grid');
+
+
     }
 </script>
+
+<script src="sketch.js"></script>
 </body>
+
 </html>

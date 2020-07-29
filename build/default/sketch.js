@@ -1,6 +1,23 @@
-//var mybtn = new Clipboard('.btn');
+/* this is the js code from sketch.js
+First quadrant only
+using translate and scaling the canvas
 
-var div = 20;
+*/
+
+
+//midi sequence (221 2221)
+let midiNotes = [48,50,52,53,55,57,59,/**/ 60,62,64,65,67,69,71,/**/72,74,76,77,79,81,83,/**/84,86,88,89,91,93,95,/**/
+    96,98,100,101,103,105,107];
+
+let noteIndex = 0;
+let midiVal, freq;
+var xCoord = 30
+var yCoord =180
+var brushWidth=30
+var div = 40;
+
+//program to pick coordinates from grid
+
 var i = 0;
 var j = 0;
 var points = [];
@@ -14,48 +31,26 @@ var horSlider;
 var horValue = 0;
 var button;
 var timeStamp = 0;
-var synth;
 
-var noDups = function(){
-    for (var k = 0;k<points.length-2;k+=2){
-        if(points[k] === tempX && points[k+1] === tempY){
-            duplicates = true;
-        }
-    }
-};
+var osc;
 
-function redraw(){
-    //points = [];
-    //timeStamp = frameCount;
+
+function redrawGrid(){
+    points = [];
+    timeStamp = frameCount;
     console.log('redraw');
-}
-
-function loadSynth(synth_input){
-    synth = synth_input;
-}
-
-function playNotes(){
-    if(frameCount - timeStamp < 1200 && timeStamp !=0) {
-        if (frameCount % 40 === 0) {
-            horSlider.value(horValue += 0.1);
-            drawPoints(horSlider.value() * 120, 400 - vertSlider.value() * 120);
-            //create a synth and connect it to the master output (your speakers)
-            //var synth = new Tone.Synth().toMaster();
-
-//play a middle 'C' for the duration of an 8th note
-            synth.triggerAttackRelease('C4', '8n');
-        }
-    }
-    else{
-        horSlider.value(0);
-    }
 }
 
 function drawGrid(){
     background(255);
-    textSize(20);
-    stroke(0,0,0);
 
+    textSize(20);
+
+    stroke(0,0,0);
+    push();
+    translate(-400,0);
+    scale(2);
+    //horz & vert gridlines
     for (let i=0;i<400;i++){
         line(i*div,j,i*div,j+400);
     }
@@ -65,10 +60,10 @@ function drawGrid(){
     }
 
     stroke(255, 0, 0);
-    strokeWeight(2);
+    strokeWeight(1);
     line(0,200,400,200);
     line(200,0,200,400);
-    strokeWeight(1);
+    strokeWeight(2);
 
     stroke(0, 0, 0);
     textSize(20);
@@ -77,56 +72,94 @@ function drawGrid(){
     text("-X",5,191);
     text("+Y",207,20);
     text("-Y",207,394);
+    pop();
 }
 
 function setup() {
+
+    osc2 = new p5.TriOsc();
+    env2 = new p5.Envelope();
+
     strokeWeight(1);
     stroke(0, 0, 0);
-    var cnv = createCanvas(405, 405);
+    var cnv = createCanvas(400, 400);
     cnv.style('display', 'block');
-    cnv.position(450,0);
+    cnv.position(440,5);
+
+    osc = new p5.Oscillator();
+    osc.setType('square');
+    osc.freq(300);
+    osc.amp(0.05);
 
     drawGrid();
 
     noStroke();
     textSize(17);
     fill(255, 0, 0);
+
     textSize(20);
     stroke(0,0,0);
     strokeWeight(1);
     fill(0, 0, 0);
-
-    vertSlider = createSlider(0, 3, 0,0.1);
+    //slider parameters: min, max, value, step
+    vertSlider = createSlider(0, 5, 0,1);
     vertSlider.id('vertSlider');
-    vertSlider.position(350, 0);
+    vertSlider.position(355, 10);
     vertSlider.style('height', '400px');
     vertSlider.style('-webkit-appearance', 'slider-vertical');
 
-    horSlider = createSlider(0, 3, 0,0.1);
+    horSlider = createSlider(0, 5, 0,1);
     horSlider.id('horSlider');
-    horSlider.position(430, 400);
+    horSlider.position(430, 410);
     horSlider.style('width', '420px');
+
 };
 
 
 function draw() {
     horValue = horSlider.value();
-    playNotes();
-};
 
+    if(frameCount - timeStamp < 200 && timeStamp !=0) {
+        if (frameCount % 40 === 0) {
+            horSlider.value(horValue += 1);
+            //we are using a slider max value of 5
+            //and the quadrant is 200 x 200
+            drawPoints(horSlider.value() * 40+200, 200 - vertSlider.value() * 40);
 
-function mouseClicked() {
-    if(mouseY<450) {
-        drawPoints(mouseX, mouseY);
+            midiVal = midiNotes[noteIndex % midiNotes.length];
+            freq = midiToFreq(midiVal);
+            osc2.freq(freq);
+            env2.ramp(osc2, 0, 1.0, 0);
+            osc2.start();
+
+            //Play next note
+            noteIndex++;
+        }
     }
+    else{
+        horSlider.value(0);
+        noteIndex=0;
+    }
+
 };
+
+
 
 function drawPoints(x, y){
-    if(y>0 && x<400 && x>0){
+    push();
+    translate(-400,0);
+    scale(2);
+    //ellipse(200,200,10,10)
+    //200,200 is the origin
+    //400,0 is the upper right
+
+    if(y>=0 && x<=400 && x>=0){
+        //sliding everything over by 200 bc we are using the 1st quadrant
         tempX = round(x/div)*div;
         tempY = round(y/div)*div;
         stroke(0, 0, 255);
         fill(0, 0, 255);
+
         ellipse(tempX, tempY, 10,10);
 
         points.push(tempX);
@@ -139,33 +172,16 @@ function drawPoints(x, y){
 
         strokeWeight(1);
         fill(0, 0, 0);
-        textSize(15);
-        text(round((mouseX-200)/div) + "," + -round((mouseY-200)/div), tempX-5, tempY-5);
+        textSize(10);
+
         noStroke();
-        if(counter===0){
-            text("coordinates",10,10);
-        }
-        noDups();
-        if (duplicates === false){
-            text("("+round((mouseX-200)/div) + "," + -round((mouseY-200)/div) +")", 10, 230+counter*15);
 
-            if(counter === 0){
-                coord_text = "createStationBlock" + "([["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]";
-                //document.getElementById("foo").value = coord_text;
-            }
-            else{
-                coord_text = coord_text + "," + "["+round((mouseX-200)/40) + "," + -round((mouseY-200)/40) +"]";
-                //document.getElementById("foo").value = coord_text;
-            }
-        }
-        else{
-            coord_text = coord_text +"])";
-            //document.getElementById("foo").value = coord_text;
+        text(counter+1 + ',' + vertSlider.value(),tempX-15,tempY-10)
 
-        }
-        duplicates = false;
         counter++;
     }
-}
 
+    pop();
+
+}
 
