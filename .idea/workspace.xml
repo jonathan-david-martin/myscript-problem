@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acf81330-e6a9-46c2-a4b8-ad43e9da0a9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2015_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Aug_2019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/JAn_2017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2016_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2017_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2017_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jan_2020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jun_2014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jun_2015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jun_2016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/Jun_2017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/default/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/default/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/default/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sketch.js" beforeDir="false" />
-    </list>
+    <list default="true" id="acf81330-e6a9-46c2-a4b8-ad43e9da0a9a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -44,8 +16,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/default/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="341">
+              <caret line="35" column="177" selection-start-line="35" selection-start-column="177" selection-end-line="35" selection-end-column="177" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="171">
+              <caret line="9" selection-start-line="9" selection-end-line="14" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -284,18 +259,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42646000" />
+    <option name="totallyTimeSpent" value="43165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="129" width="797" height="758" extended-state="0" />
+    <frame x="138" y="166" width="797" height="758" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773194" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994872" visible="true" weight="0.0990991" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994872" visible="true" weight="0.0990991" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,17 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/default/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-746">
@@ -406,10 +370,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build/default/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        <state relative-caret-position="341">
+          <caret line="35" column="177" selection-start-line="35" selection-start-column="177" selection-end-line="35" selection-end-column="177" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
