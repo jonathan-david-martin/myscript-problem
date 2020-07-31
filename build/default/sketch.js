@@ -146,7 +146,23 @@ function draw() {
 
 };
 
+/*Removed startTimer from html*/
+function startTimer() {
+    points = [];
+    counter =0;
+    horSlider.value(0);
+    vertSlider.value(0);
+    drawGrid();
+    timeStamp = frameCount;
+    console.log('redraw grid');
+}
 
+function mousePressed(){
+    if(mouseX <=15) {
+        startTimer();
+    }
+
+}
 
 function drawPoints(x, y){
     push();
