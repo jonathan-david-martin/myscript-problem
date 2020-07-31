@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.33/Tone.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <meta charset="utf-8"/>
+
+</head>
+
+<body>
+
+<div class="row">
+
+    <div class="col-sm-12">
+        <a href="index.html" style="font-size: 40px;">NEXT</a>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-12">
+        <button type="button" onclick="startTimer()">Start Timer!</button>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-12">
+
+        <h2>Experiment clicking the Start Timer button and then dragging the vertical slided up and down to see the resulting graph. Try dragging at different speeds up and down.
+        </h2>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div id="sketch-div" class="col-sm-12">
+
+    </div>
+</div>
+
+
+
+
+
+
+    <script>
+        function startTimer() {
+            points = [];
+            counter =0;
+            horSlider.value(0);
+            vertSlider.value(0);
+            drawGrid();
+            timeStamp = frameCount;
+            console.log('redraw grid');
+        }
+    </script>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>

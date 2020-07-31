@@ -83,8 +83,9 @@ function setup() {
     strokeWeight(1);
     stroke(0, 0, 0);
     var cnv = createCanvas(400, 400);
+    cnv.parent('sketch-div');
     cnv.style('display', 'block');
-    cnv.position(440,5);
+    cnv.position(80,0);
 
     osc = new p5.Oscillator();
     osc.setType('square');
@@ -103,14 +104,16 @@ function setup() {
     fill(0, 0, 0);
     //slider parameters: min, max, value, step
     vertSlider = createSlider(0, 5, 0,1);
+    vertSlider.parent('sketch-div');
     vertSlider.id('vertSlider');
-    vertSlider.position(355, 10);
+    vertSlider.position(0, 10);
     vertSlider.style('height', '400px');
     vertSlider.style('-webkit-appearance', 'slider-vertical');
 
     horSlider = createSlider(0, 5, 0,1);
+    horSlider.parent('sketch-div');
     horSlider.id('horSlider');
-    horSlider.position(430, 410);
+    horSlider.position(80, 410);
     horSlider.style('width', '420px');
 
 };

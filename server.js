@@ -8,6 +8,7 @@ const path = require('path');
 app.use('/', express.static(path.join(__dirname, '/build/default')));
 //app.use(express.static('./build/default'));
 
+
 var http = require('http');
 var server = http.Server(app);
 var io = require('socket.io')(server);
