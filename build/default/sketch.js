@@ -70,7 +70,7 @@ function drawGrid(){
     fill(0, 0, 0);
     text("(sec)",360,191);
     text("-X",5,191);
-    text("(cm)",202,20);
+    text("(inches)",202,20);
     text("-Y",207,394);
     pop();
 }
