@@ -63,14 +63,14 @@ function drawGrid(){
     strokeWeight(1);
     line(0,200,400,200);
     line(200,0,200,400);
-    strokeWeight(2);
+    //strokeWeight(2);
 
     stroke(0, 0, 0);
-    textSize(20);
+    textSize(18);
     fill(0, 0, 0);
-    text("+X",366,191);
+    text("(sec)",360,191);
     text("-X",5,191);
-    text("+Y",207,20);
+    text("(cm)",202,20);
     text("-Y",207,394);
     pop();
 }
@@ -94,6 +94,24 @@ function setup() {
 
     drawGrid();
 
+    vertSlider = createSlider(0, 5, 0,1);
+    vertSlider.value(5);
+
+    var sliderColR = color(255,0,0);
+
+    var sliderOutline = color(255,255,255);
+    //rSlider.style('fill', sliderColR);
+    //rSlider.style('stroke', sliderColR);
+    vertSlider.style('background-color', sliderColR);
+    //rSlider.style('outline', sliderColR);
+    vertSlider.style('-webkit-appearance', 'none');
+    vertSlider.style('-webkit-transform', 'rotate(90deg)');
+    vertSlider.style('width', '400px');
+    vertSlider.position(-130, 190);
+    vertSlider.parent('sketch-div');
+
+
+
     noStroke();
     textSize(17);
     fill(255, 0, 0);
@@ -103,12 +121,23 @@ function setup() {
     strokeWeight(1);
     fill(0, 0, 0);
     //slider parameters: min, max, value, step
+
+    /*
     vertSlider = createSlider(0, 5, 0,1);
     vertSlider.parent('sketch-div');
     vertSlider.id('vertSlider');
     vertSlider.position(0, 10);
     vertSlider.style('height', '400px');
-    vertSlider.style('-webkit-appearance', 'slider-vertical');
+    vertSlider.style('-webkit-appearance', 'none');
+    //vertSlider.style('-webkit-transform', 'rotate(90deg)');
+
+    var sliderColR = color(255,0,0);
+
+    var sliderOutline = color(255,255,255);
+
+    vertSlider.style('background-color', sliderColR);
+    vertSlider.style('outline', sliderOutline);
+*/
 
     horSlider = createSlider(0, 5, 0,1);
     horSlider.parent('sketch-div');
@@ -127,9 +156,9 @@ function draw() {
             horSlider.value(horValue += 1);
             //we are using a slider max value of 5
             //and the quadrant is 200 x 200
-            drawPoints(horSlider.value() * 40+200, 200 - vertSlider.value() * 40);
+            drawPoints(horSlider.value() * 40+200, vertSlider.value() * 40);
 
-            midiVal = midiNotes[noteIndex % midiNotes.length];
+            midiVal = midiNotes[(5-vertSlider.value()) % midiNotes.length];
             freq = midiToFreq(midiVal);
             osc2.freq(freq);
             env2.ramp(osc2, 0, 1.0, 0);
@@ -151,7 +180,7 @@ function startTimer() {
     points = [];
     counter =0;
     horSlider.value(0);
-    vertSlider.value(0);
+    vertSlider.value(5);
     drawGrid();
     timeStamp = frameCount;
     console.log('redraw grid');
@@ -195,7 +224,7 @@ function drawPoints(x, y){
 
         noStroke();
 
-        text(counter+1 + ',' + vertSlider.value(),tempX-15,tempY-10)
+        text(counter+1 + ',' + (5-vertSlider.value()),tempX-15,tempY-10);
 
         counter++;
     }
