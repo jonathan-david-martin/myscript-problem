@@ -162,15 +162,17 @@
     }
 
     function draw() {
-        background(255);
-        fill(255, 0, 0);
+        fill(255,255,255,30);
+        rect(0,0,400,400);
+        
+        fill(255, 0, 0,60);
 
         ellipse(100, 400 - xAccel * 20, 10, 10);
 
-        fill(0, 255, 0);
+        fill(0, 255, 0,15);
 
         ellipse(200, 400 - yAccel * 20, 10, 10);
-        fill(0, 0, 255);
+        fill(0, 0, 255,15);
 
         ellipse(300, 400 - zAccel * 20, 10, 10);
 
