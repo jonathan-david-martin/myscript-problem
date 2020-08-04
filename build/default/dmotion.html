@@ -7,13 +7,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
     <title>Device Orientation API Demo by Aurelio De Rosa</title>
-    <link rel="stylesheet" href="./shared.css" />
+    <link rel="stylesheet" href="./shared.css"/>
     <style>
-        .cube
-        {
+        .cube {
             width: 150px;
             height: 150px;
             position: relative;
@@ -22,8 +23,7 @@
             transform-style: preserve-3d;
         }
 
-        .face
-        {
+        .face {
             width: 150px;
             height: 150px;
             position: absolute;
@@ -35,126 +35,115 @@
             opacity: 0.6;
         }
 
-        .cube .one
-        {
+        .cube .one {
             -webkit-transform: translateZ(75px);
             transform: translateZ(75px);
         }
 
-        .cube .two
-        {
+        .cube .two {
             -webkit-transform: rotateY(90deg) translateZ(75px);
             transform: rotateY(90deg) translateZ(75px);
         }
 
-        .cube .three
-        {
+        .cube .three {
             -webkit-transform: rotateY(180deg) translateZ(75px);
             transform: rotateY(180deg) translateZ(75px);
         }
 
-        .cube .four
-        {
+        .cube .four {
             -webkit-transform: rotateY(-90deg) translateZ(75px);
             transform: rotateY(-90deg) translateZ(75px);
         }
 
-        .cube .five
-        {
+        .cube .five {
             -webkit-transform: rotateX(90deg) translateZ(75px);
             transform: rotateX(90deg) translateZ(75px);
         }
 
-        .cube .six
-        {
+        .cube .six {
             -webkit-transform: rotateX(-90deg) translateZ(75px) rotate(0deg);
             transform: rotateX(-90deg) translateZ(75px) rotate(0deg);
         }
     </style>
 </head>
 <body>
-<a href="https://code.tutsplus.com/tutorials/an-introduction-to-the-device-orientation-api--cms-21067">Go back to the article</a>
+<div class="row">
 
-<h1>Device Orientation API
+    <div class="col-sm-12">
 
+        <div id="graph-div">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</h1>
-
-<span id="do-unsupported" class="api-support hidden">deviceorientation event not supported</span>
-<span id="dm-unsupported" class="api-support hidden">devicemotion event not supported</span>
-<span id="cnc-unsupported" class="api-support hidden">compassneedscalibration event not supported</span>
-
-<div id="do-results">
-    <div id="cube" class="cube">
-        <div class="face one">1</div>
-        <div class="face two">2</div>
-        <div class="face three">3</div>
-        <div class="face four">4</div>
-        <div class="face five">5</div>
-        <div class="face six">6</div>
-    </div>
-    <div id="do-info" class="hidden">
-        <p>
-            Coordinates:
-            (<span id="beta" class="value">null</span>,
-            <span id="gamma" class="value">null</span>,
-            <span id="alpha" class="value">null</span>)
-            <br />
-            Position absolute? <span id="is-absolute" class="value">unavailable</span>
-        </p>
-    </div>
-    <div id="dm-info" class="hidden">
-        <p>
-            Acceleration:
-            (<span id="acceleration-x" class="value">null</span>,
-            <span id="acceleration-y" class="value">null</span>,
-            <span id="acceleration-z" class="value">null</span>)
-            m/s<sup>2</sup>
-        </p>
-        <p>
-            Acceleration including gravity:
-            (<span id="acceleration-including-gravity-x" class="value">null</span>,
-            <span id="acceleration-including-gravity-y" class="value">null</span>,
-            <span id="acceleration-including-gravity-z" class="value">null</span>)
-            m/s<sup>2</sup>
-        </p>
-        <p>
-            Rotation rate:
-            (<span id="rotation-rate-beta" class="value">null</span>,
-            <span id="rotation-rate-gamma" class="value">null</span>,
-            <span id="rotation-rate-alpha" class="value">null</span>)
-        </p>
-        <p>
-            Interval: <span id="interval" class="value">0</span> milliseconds
-        </p>
+        </div>
     </div>
 </div>
 
-<div id="graph-div">
+<div class="row">
 
+    <div class="col-sm-12">
+
+
+        <a href="https://code.tutsplus.com/tutorials/an-introduction-to-the-device-orientation-api--cms-21067">Go back
+            to the article</a>
+
+        <h1>Device Orientation API</h1>
+
+        <span id="do-unsupported" class="api-support hidden">deviceorientation event not supported</span>
+        <span id="dm-unsupported" class="api-support hidden">devicemotion event not supported</span>
+        <span id="cnc-unsupported" class="api-support hidden">compassneedscalibration event not supported</span>
+
+        <div id="do-results">
+            <div id="cube" class="cube">
+                <div class="face one">1</div>
+                <div class="face two">2</div>
+                <div class="face three">3</div>
+                <div class="face four">4</div>
+                <div class="face five">5</div>
+                <div class="face six">6</div>
+            </div>
+            <div id="do-info" class="hidden">
+                <p>
+                    Coordinates:
+                    (<span id="beta" class="value">null</span>,
+                    <span id="gamma" class="value">null</span>,
+                    <span id="alpha" class="value">null</span>)
+                    <br/>
+                    Position absolute? <span id="is-absolute" class="value">unavailable</span>
+                </p>
+            </div>
+            <div id="dm-info" class="hidden">
+                <p>
+                    Acceleration:
+                    (<span id="acceleration-x" class="value">null</span>,
+                    <span id="acceleration-y" class="value">null</span>,
+                    <span id="acceleration-z" class="value">null</span>)
+                    m/s<sup>2</sup>
+                </p>
+                <p>
+                    Acceleration including gravity:
+                    (<span id="acceleration-including-gravity-x" class="value">null</span>,
+                    <span id="acceleration-including-gravity-y" class="value">null</span>,
+                    <span id="acceleration-including-gravity-z" class="value">null</span>)
+                    m/s<sup>2</sup>
+                </p>
+                <p>
+                    Rotation rate:
+                    (<span id="rotation-rate-beta" class="value">null</span>,
+                    <span id="rotation-rate-gamma" class="value">null</span>,
+                    <span id="rotation-rate-alpha" class="value">null</span>)
+                </p>
+                <p>
+                    Interval: <span id="interval" class="value">0</span> milliseconds
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 <small class="author">
     Demo created by <a href="https://www.audero.it">Aurelio De Rosa</a>
-    (<a href="https://twitter.com/AurelioDeRosa">@AurelioDeRosa</a>).<br />
+    (<a href="https://twitter.com/AurelioDeRosa">@AurelioDeRosa</a>).<br/>
     This demo is part of the <a href="https://github.com/AurelioDeRosa/HTML5-API-demos">HTML5 API demos repository</a>.
 </small>
 
@@ -169,22 +158,22 @@
         cnv.position(80, 0);
         cnv.parent('graph-div');
         cnv.style('display', 'block');
-        cnv.position(80,0);
+        cnv.position(80, 0);
     }
 
-    function draw(){
-        background();
-        fill(255,0,0);
+    function draw() {
+        //background();
+        fill(255, 0, 0);
 
-        ellipse(100,400-xAccel*20,10,10);
+        ellipse(100, 400 - xAccel * 20, 10, 10);
 
-        fill(0,255,0);
+        fill(0, 255, 0);
 
-        ellipse(200,400-yAccel*20,10,10);
-        fill(0,0,255);
+        ellipse(200, 400 - yAccel * 20, 10, 10);
+        fill(0, 0, 255);
 
-        ellipse(300,400-zAccel*20,10,10);
-        
+        ellipse(300, 400 - zAccel * 20, 10, 10);
+
     }
 
     if (!('ondeviceorientation' in window)) {
@@ -192,7 +181,7 @@
     } else {
         document.getElementById('do-info').classList.remove('hidden');
 
-        window.addEventListener('deviceorientation', function(event) {
+        window.addEventListener('deviceorientation', function (event) {
             document.getElementById('cube').style.webkitTransform =
                 document.getElementById('cube').style.transform =
                     'rotateX(' + event.beta + 'deg) ' +
@@ -211,7 +200,7 @@
     } else {
         document.getElementById('dm-info').classList.remove('hidden');
 
-        window.addEventListener('devicemotion', function(event) {
+        window.addEventListener('devicemotion', function (event) {
             xAccel = event.acceleration.x;
             yAccel = event.acceleration.y;
             zAccel = event.acceleration.z;
@@ -239,7 +228,7 @@
     if (!('oncompassneedscalibration' in window)) {
         document.getElementById('cnc-unsupported').classList.remove('hidden');
     } else {
-        window.addEventListener('compassneedscalibration', function(event) {
+        window.addEventListener('compassneedscalibration', function (event) {
             alert('Compass needs calibrating! Wave your device in a figure-eight motion');
         });
     }
