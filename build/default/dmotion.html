@@ -75,7 +75,28 @@
 <body>
 <a href="https://code.tutsplus.com/tutorials/an-introduction-to-the-device-orientation-api--cms-21067">Go back to the article</a>
 
-<h1>Device Orientation API</h1>
+<h1>Device Orientation API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h1>
 
 <span id="do-unsupported" class="api-support hidden">deviceorientation event not supported</span>
 <span id="dm-unsupported" class="api-support hidden">devicemotion event not supported</span>
@@ -138,7 +159,10 @@
 </small>
 
 <script>
-    var vert = 0;
+    var xAccel = 0;
+    var yAccel = 0;
+    var zAccel = 0;
+
     function setup() {
 
         var cnv = createCanvas(400, 400);
@@ -149,7 +173,18 @@
     }
 
     function draw(){
-        ellipse(200,400-vert*20,10,10);
+        background();
+        fill(255,0,0);
+
+        ellipse(100,400-xAccel*20,10,10);
+
+        fill(0,255,0);
+
+        ellipse(200,400-yAccel*20,10,10);
+        fill(0,0,255);
+
+        ellipse(300,400-zAccel*20,10,10);
+        
     }
 
     if (!('ondeviceorientation' in window)) {
@@ -177,7 +212,10 @@
         document.getElementById('dm-info').classList.remove('hidden');
 
         window.addEventListener('devicemotion', function(event) {
-            vert = event.acceleration.x;
+            xAccel = event.acceleration.x;
+            yAccel = event.acceleration.y;
+            zAccel = event.acceleration.z;
+
 
             document.getElementById('acceleration-x').innerHTML = (event.acceleration.x).toFixed(1);
             document.getElementById('acceleration-y').innerHTML = (event.acceleration.y).toFixed(1);
