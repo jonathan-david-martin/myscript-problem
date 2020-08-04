@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Aurelio De Rosa">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+
+
     <title>Device Orientation API Demo by Aurelio De Rosa</title>
     <link rel="stylesheet" href="./shared.css" />
     <style>
@@ -129,6 +134,17 @@
 </small>
 
 <script>
+    var vert = 0;
+    function setup() {
+
+        var cnv = createCanvas(400, 400);
+        cnv.position(80, 0);
+    }
+
+    function draw(){
+        ellipse(200,400-vert,10,10);
+    }
+
     if (!('ondeviceorientation' in window)) {
         document.getElementById('do-unsupported').classList.remove('hidden');
     } else {
@@ -154,7 +170,8 @@
         document.getElementById('dm-info').classList.remove('hidden');
 
         window.addEventListener('devicemotion', function(event) {
-            //let accelX = event.acceleration.x;
+            vert = event.acceleration.x;
+
             document.getElementById('acceleration-x').innerHTML = (event.acceleration.x).toFixed(1);
             document.getElementById('acceleration-y').innerHTML = (event.acceleration.y).toFixed(1);
             document.getElementById('acceleration-z').innerHTML = (event.acceleration.z).toFixed(1);
