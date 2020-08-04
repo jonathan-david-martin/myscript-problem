@@ -154,7 +154,8 @@
         document.getElementById('dm-info').classList.remove('hidden');
 
         window.addEventListener('devicemotion', function(event) {
-            document.getElementById('acceleration-x').innerHTML = (event.acceleration.x).toFixed(2);
+            let accelX = event.acceleration.x;
+            document.getElementById('acceleration-x').innerHTML = accelX.toString();
             document.getElementById('acceleration-y').innerHTML = (event.acceleration.y).toFixed(2);
             document.getElementById('acceleration-z').innerHTML = (event.acceleration.z).toFixed(2);
 
