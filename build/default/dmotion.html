@@ -154,9 +154,9 @@
         document.getElementById('dm-info').classList.remove('hidden');
 
         window.addEventListener('devicemotion', function(event) {
-            document.getElementById('acceleration-x').innerHTML = Math.round(event.acceleration.x);
-            document.getElementById('acceleration-y').innerHTML = Math.round(event.acceleration.y);
-            document.getElementById('acceleration-z').innerHTML = Math.round(event.acceleration.z);
+            document.getElementById('acceleration-x').innerHTML = (event.acceleration.x).toFixed(2);
+            document.getElementById('acceleration-y').innerHTML = (event.acceleration.y).toFixed(2);
+            document.getElementById('acceleration-z').innerHTML = (event.acceleration.z).toFixed(2);
 
             document.getElementById('acceleration-including-gravity-x').innerHTML =
                 Math.round(event.accelerationIncludingGravity.x);
