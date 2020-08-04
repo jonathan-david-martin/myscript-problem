@@ -127,6 +127,10 @@
     </div>
 </div>
 
+<div id="graph-div">
+
+</div>
+
 <small class="author">
     Demo created by <a href="https://www.audero.it">Aurelio De Rosa</a>
     (<a href="https://twitter.com/AurelioDeRosa">@AurelioDeRosa</a>).<br />
@@ -139,10 +143,13 @@
 
         var cnv = createCanvas(400, 400);
         cnv.position(80, 0);
+        cnv.parent('graph-div');
+        cnv.style('display', 'block');
+        cnv.position(80,0);
     }
 
     function draw(){
-        ellipse(200,400-vert,10,10);
+        ellipse(200,400-vert*20,10,10);
     }
 
     if (!('ondeviceorientation' in window)) {
